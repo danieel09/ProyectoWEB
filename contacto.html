@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LEYDEN - contacto</title>
+        <link rel="stylesheet" href="styleBarra.css">
+    </head>
+      <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Nuestra historia</a></li>
+                <li><a href="productos.html">Nuestro catálogo</a> </li>
+                <li><a href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a href="contacto.html">Nuestro contacto</a></li>
+            </ul>
+        </nav>
+        <h1>CONTACTO</h1>
+        <div class="form">
+            <p>
+                Si desea información o alguna cotización, llame a Cel. (33) 3020-5445 Cel. (33) 3100-8737<br>
+
+                Nos pondremos en contacto con Ud. tan pronto nos sea posible.<br>
+
+                Ventas: ventas@leyden.com.mx Depto. tècnico: tecnicos@leyden.com.mx<br>
+
+                Aviso de privacidad: Leyden no transferirá a terceros datos ni registros personales proporcionados a nosotros por usted a través de Internet o cualesquier otro medio de comunicación para finalidades diferentes de las anteriormente indicadas sin ponerlo antes en su conocimiento y obtener su permiso escrito al respecto.<br>
+            </p>
+            <div class="contenedor">
+                <div class="fondoAzul">
+                    <form>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                        <label for="telefono">Teléfono:</label>
+                        <input 
+                            type="text" 
+                            maxlength="10" 
+                            id="telefono" 
+                            name="telefono"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                            placeholder="10 dígitos">
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea id="comentarios" name="comentarios" placeholder="Aquí ingresa tus comentarios..."></textarea>
+                        <input id="btnEnviar" type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
