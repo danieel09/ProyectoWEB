@@ -3,11 +3,25 @@
     <head>
         <title>LEYDEN - inicio</title>
         <link rel="stylesheet" href="styleBarra.css">
+        <style>
+            body{
+                background: linear-gradient(rgba(36, 44, 47, 0.67), rgba(36, 44, 47, 0.67)), 
+                url('https://static.vecteezy.com/system/resources/thumbnails/066/010/019/small/solar-water-heater-on-a-roof-under-a-clear-blue-sky-promoting-renewable-energy-for-eco-friendly-living-photo.jpg');
+
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                font-weight: 800;
+            }
+            h1{
+                font-weight: 1000;
+                letter-spacing: 1px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        </style>
     </head>
       <body>
-        <section class= "logoPrincipal">
-            <img src="imagenes/logo.jpeg" alt="Logo LEYDEN">
-        </section>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -17,14 +31,15 @@
                 <li><a href="contacto.html">Nuestro contacto</a></li>
             </ul>
         </nav>
-        <h1>CALENTADORES SOLARES Y ELECTRICOS</h1>
-        <h2>Bienvenido a la página de
-            Calentadores eléctricos, electrónicos y solares LEYDEN
-        </h2>
+        <section class= "logoPrincipal">
+            <img src="imagenes/logo2.png" alt="Logo LEYDEN">
+            <h1>CALENTADORES SOLARES Y ELECTRICOS</h1>
+        </section>
         <div class="dosPartes">
             <img src="imagenes/img3.jpg" alt="Imagen Calentadores">
-            <button id="explicacion"><a href="Explicacion.html">Nuestra Tecnología</a></button>
-            <button id="cotizar"><a href="cotizacion.html">Cotizar ahora</a></button>
-        </div>      
+            <button id="explicacion" onclick="window.location.href='Explicacion.html'">Nuestra Tecnología</button>
+            <button id="cotizar" onclick="window.location.href='cotizacion.html'">COTIZA AHORA</button>
+        </div>   
+        <footer><p> Leyden ® </p></footer>   
     </body>
 </html>
