@@ -27,25 +27,20 @@
             </p>
             <div class="contenedor">
                 <div class="fondoAzul">
-                    <form>
+                    <form onsubmit="return validar()">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre">
                         <label for="email">Email:</label>
                         <input type="text" id="email" name="email">
                         <label for="telefono">Teléfono:</label>
-                        <input 
-                            type="text" 
-                            maxlength="10" 
-                            id="telefono" 
-                            name="telefono"
-                            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                            placeholder="10 dígitos">
+                        <input type="text" id="telefono" name="telefono" placeholder="10 dígitos" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         <label for="comentarios">Comentarios:</label>
                         <textarea id="comentarios" name="comentarios" placeholder="Aquí ingresa tus comentarios..."></textarea>
-                        <input id="btnEnviar" type="submit" value="Enviar">
+                        <button id="btnEnviar" type="submit" value="Enviar">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
+        <script src="app.js"></script>
     </body>
 </html>
