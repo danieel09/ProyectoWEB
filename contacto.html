@@ -17,11 +17,7 @@
         <h1>CONTACTO</h1>
         <div class="form">
             <p>
-                Si desea información o alguna cotización, llame a Cel. (33) 3020-5445 Cel. (33) 3100-8737<br>
-
-                Nos pondremos en contacto con Ud. tan pronto nos sea posible.<br>
-
-                Ventas: ventas@leyden.com.mx Depto. tècnico: tecnicos@leyden.com.mx<br>
+                Si desea información o alguna cotización.
 
                 Aviso de privacidad: Leyden no transferirá a terceros datos ni registros personales proporcionados a nosotros por usted a través de Internet o cualesquier otro medio de comunicación para finalidades diferentes de las anteriormente indicadas sin ponerlo antes en su conocimiento y obtener su permiso escrito al respecto.<br>
             </p>
@@ -36,11 +32,47 @@
                         <input type="text" id="telefono" name="telefono" placeholder="10 dígitos" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         <label for="comentarios">Comentarios:</label>
                         <textarea id="comentarios" name="comentarios" placeholder="Aquí ingresa tus comentarios..."></textarea>
+                        <div class="avisoPrivacidad">
+                            <input type="checkbox" id="privacidad" required>
+                            <label for="privacidad">
+                                He leído y acepto el aviso de privacidad.
+                            </label>
+                        </div>
                         <button id="btnEnviar" type="submit" value="Enviar">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
+        <footer class="cnt">
+            <div class="grupoA">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="imagenes/logo2.png" alt="Logo LEYDEN">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>Contacto</h2>
+                    <h3>Teléfono:</h3>
+                    <p> (33) 3020-5445</p>
+                    <h3>Celular:</h3>
+                    <p>(33) 3100-8737</p>
+                </div>
+                <div class="box">
+                    <h2>Correos</h2>
+                    <h3>Ventas:</h3>
+                    <p>ventas@leyden.com.mx</p>
+                    <h3>Dept. técnico:</h3>
+                    <p>tecnicos@leyden.com.mx</p>
+                </div>
+            </div>
+            <div class="grupoB"
+                <small>&copy; 1987 <b> LEYDEN</b> - Todos los Derechos Reservados. </small>
+            </div>
+        </footer>
+
         <script src="app.js"></script>
+
     </body>
 </html>

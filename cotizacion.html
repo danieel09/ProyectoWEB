@@ -14,5 +14,55 @@
                 <li><a href="contacto.html">Nuestro contacto</a></li>
             </ul>
         </nav>
+        <h1>COTIZACION</h1>
+        <div class="form2">
+            <div class="contenedor">
+                <div class="fondoAzul">
+                    <form onsubmit="return cotizar()">
+                        <label for="tipoInstalacion">Tipo de Instalación:</label>
+                        <select id="tipoInstalacion" onchange="mostrarPreguntas()" name="instalacion">
+                            <option value="">Selecciona una opción</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="domestico">Doméstico</option>
+                        </select>
+
+                        <div id="preguntasIndustrial" class="oculto">
+                            <div class="grupoP">
+                                <label for="litros">¿Cuántos litros por minuto quiere usar?</label>
+                                <div class="enLinea">
+                                    <input id="litros" type="number" name="litros"> 
+                                    <p>litros</p>
+                                </div>
+                                <label for="temperatura">¿Qué temperatura final requiere?</label>
+                                <div class="enLinea">
+                                    <input id="temperatura" type="number" name="temperatura">
+                                    <p>C°</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="preguntasDomestico" class="oculto">
+                            <div class="grupoP">
+                                <label for="regaderas">¿Cuántas Regaderas simultáneas se necesitan?</label>
+                                <div class="enLinea">
+                                    <input id="regaderas" type="number" name="regaderas"> 
+                                    <p>regaderas</p>
+                                </div>
+                            </div>
+                                <label>Tipo de Calentador requerido</label>
+                                <select id="tipoCalentador" name="calentador">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="dePaso">De paso (220V)</option>
+                                    <option value="Deposito220">Depósito (220V)</option>
+                                    <option value="Deposito110">Depósito(110V)</option>
+                                </select>
+                        </div>
+
+                        <button id="btnCotizar" type="submit" value="Cotizar">Cotizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
     </body>
 </html>

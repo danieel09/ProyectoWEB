@@ -122,12 +122,12 @@ nav ul li a:hover {
     color: #12264a;
 }
 
-form {
+form, form2 {
     display: flex;
     flex-direction: column;
     width: 300px;          
     gap: 10px;              
-  }
+}
 
 .fondoAzul{
     width: 600px;
@@ -140,7 +140,7 @@ form {
     
 }
 
-#btnEnviar{
+#btnEnviar, #btnCotizar{
    margin-top: 30px;
    padding: 10px;
    background-color: #12eeb7;
@@ -149,7 +149,7 @@ form {
     font-weight: 700;
 }
 
-#btnEnviar:hover {
+#btnEnviar:hover, #btnCotizar:hover {
     background-color: #93d2f9;
     color: #12264a;
     cursor: pointer;
@@ -163,4 +163,91 @@ label{
 .contenedor{
     justify-content: center;
     display: flex;
+    margin-bottom: 30px;
+}
+
+.oculto{
+    display: none;
+    flex-direction: column;
+    width: 300px;          
+    gap: 10px;
+    color: white;
+}
+
+
+/*Footer de contacto*/
+.cnt{
+    width: 100%;
+    background-color: #12264a;
+    margin: 0%;
+    padding: 0%;
+}
+
+.cnt .grupoA{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.cnt .grupoA .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.cnt .grupoA .box  figure img{
+    width: 440px;
+}
+
+.cnt .grupoA .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20 px;
+}
+
+.cnt .grupoA .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.cnt .grupoB{
+    background-color: #0d1b36;
+    padding: 15px 10px;
+    text-align: center;
+    color: #efefef;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:800px){
+    .cnt .grupoA{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+    }
+}
+
+/* cotizacion*/
+.grupoP{
+    margin-bottom: 5px;
+}
+.grupoP label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.enLinea{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.enLinea input{
+    width: 250px;
 }
