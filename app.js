@@ -25,9 +25,9 @@ function validar() {
 
 function cotizar() {
     let tipoInstalacion = document.getElementById("tipoInstalacion").value;
-    let litros = parseFloat(document.getElementById("litros").value);
-    let temperatura = parseFloat(document.getElementById("temperatura").value);
-    let regaderas = parseInt(document.getElementById("regaderas").value);
+    const litros = parseFloat(document.getElementById("litros").value);
+    const temperatura = parseFloat(document.getElementById("temperatura").value);
+    const regaderas = parseInt(document.getElementById("regaderas").value);
     let tipoCalentador = document.getElementById("tipoCalentador").value;
     let cotizado;
 
@@ -46,8 +46,11 @@ function cotizar() {
                 return false;
             }
 
-            cotizado = ((1080*25)/(temperatura-20));
+            //cotizado = ((1080*25)/(temperatura-20))/60;
         }else{
+            let calentadores;
+            let residuo;
+            let aux = 0;
             if(isNaN(regaderas) || tipoCalentador == ""){
                 alert("Complete la información para su cotización doméstica.");
                 return false;
@@ -62,8 +65,27 @@ function cotizar() {
                 alert("Las regaderas deben ser números enteros.");
                 return false;
             }
+
+            if(tipoCalentador == "dePaso"){
+                calentadores = Math.trunc(regaderas/6);
+                residuo = regaderas % 6;
+                const precios = { 1: 27376, 2: 27376, 3: 29618, 4: 33276, 5: 48380, 6: 48380 };
+
+                const costoCalentadores = calentadores * precios[6];
+
+                let costoResiduo;
+                if (residuo > 0) {
+                    costoResiduo = precios[residuo];
+                } else {
+                    costoResiduo = 0;
+                }
+
+                cotizado = costoCalentadores + costoResiduo;
+            }
         }
     }
+
+    alert("Su cotización inicial es de: " + cotizado + " Pesos");
 
     return true;
 }
