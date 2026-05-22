@@ -36,17 +36,25 @@ function cotizar() {
         return false;
     }else{
         if(tipoInstalacion == "industrial"){
+            const kw36 = 48380;
+
             if(isNaN(litros) || isNaN(temperatura)){
                 alert("Complete la información para su cotización industrial.");
                 return false;
             }
 
-            if(litros <= 0 || temperatura <= 0){
+            if(litros <= 0 || temperatura <= 20 ){
                 alert("Los valores deben ser positivos.");
                 return false;
             }
 
-            //cotizado = ((1080*25)/(temperatura-20))/60;
+            let litrosCalentador = ((1080*25)/(temperatura-20))/60;
+
+            if(litrosCalentador < litros){
+                cotizado = (Math.ceil(litros/litrosCalentador)) * kw36;
+            }else{
+                cotizado = kw36;
+            }
         }else{
             let calentadores;
             let residuo;
@@ -72,6 +80,36 @@ function cotizar() {
                 const precios = { 1: 27376, 2: 27376, 3: 29618, 4: 33276, 5: 48380, 6: 48380 };
 
                 const costoCalentadores = calentadores * precios[6];
+
+                let costoResiduo;
+                if (residuo > 0) {
+                    costoResiduo = precios[residuo];
+                } else {
+                    costoResiduo = 0;
+                }
+
+                cotizado = costoCalentadores + costoResiduo;
+            }else if(tipoCalentador == "Deposito220"){
+                calentadores = Math.trunc(regaderas/3);
+                residuo = regaderas % 3;
+                const precios = { 1: 17700, 2: 19200, 3: 23600 };
+
+                const costoCalentadores = calentadores * precios[3];
+
+                let costoResiduo;
+                if (residuo > 0) {
+                    costoResiduo = precios[residuo];
+                } else {
+                    costoResiduo = 0;
+                }
+
+                cotizado = costoCalentadores + costoResiduo;
+            }else if(tipoCalentador == "Deposito110"){
+                calentadores = Math.trunc(regaderas/3);
+                residuo = regaderas % 3;
+                const precios = { 1: 15100, 2: 16500, 3: 21000 };
+
+                const costoCalentadores = calentadores * precios[3];
 
                 let costoResiduo;
                 if (residuo > 0) {
