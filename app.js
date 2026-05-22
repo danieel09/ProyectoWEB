@@ -29,6 +29,8 @@ function cotizar() {
     const temperatura = parseFloat(document.getElementById("temperatura").value);
     const regaderas = parseInt(document.getElementById("regaderas").value);
     let tipoCalentador = document.getElementById("tipoCalentador").value;
+    const personas = parseInt(document.getElementById("personas").value);
+    let tipoSistema = document.getElementById("tipoSistema").value;
     let cotizado;
 
     if(tipoInstalacion == ""){
@@ -55,7 +57,7 @@ function cotizar() {
             }else{
                 cotizado = kw36;
             }
-        }else{
+        }else if(tipoInstalacion == "domestico"){
             let calentadores;
             let residuo;
             let aux = 0;
@@ -120,6 +122,54 @@ function cotizar() {
 
                 cotizado = costoCalentadores + costoResiduo;
             }
+        }else if(tipoInstalacion == "solar"){
+            if(isNaN(personas) || tipoSistema == ""){
+                alert("Complete la información para su cotización Solar.");
+                return false;
+            }
+
+            if(personas <= 0){
+                alert("Los valores deben ser positivos.");
+                return false;
+            }
+
+            if(!Number.isInteger(personas)){
+                alert("Las personas deben ser números enteros.");
+                return false;
+            }
+
+            if(tipoSistema == "tinaco" ){
+                const precios = { 1: 3330, 2: 3780, 3: 4284, 4: 5886, 5: 6408, 6: 7518, 7: 8946, 8: 23544, 9: 37944};
+                calentadores = Math.trunc(personas/9);
+                residuo = personas % 9;
+
+                const costoCalentadores = calentadores * precios[9];
+
+                let costoResiduo;
+                if (residuo > 0) {
+                    costoResiduo = precios[residuo];
+                } else {
+                    costoResiduo = 0;
+                }
+
+                cotizado = costoCalentadores + costoResiduo;
+
+            }else if(tipoSistema == "bomba"){
+                const precios = { 1: 8550, 2: 10764, 3: 13428, 4: 16938, 5: 38934, 6: 57690};
+                calentadores = Math.trunc(personas/6);
+                residuo = personas % 6;
+
+                const costoCalentadores = calentadores * precios[6];
+
+                let costoResiduo;
+                if (residuo > 0) {
+                    costoResiduo = precios[residuo];
+                } else {
+                    costoResiduo = 0;
+                }
+
+                cotizado = costoCalentadores + costoResiduo;
+            }
         }
     }
 
@@ -134,9 +184,11 @@ function mostrarPreguntas(){
 
     let industrial = document.getElementById("preguntasIndustrial");
     let domestico = document.getElementById("preguntasDomestico");
+    let solar = document.getElementById("preguntasSolar");
 
     industrial.style.display = "none";
     domestico.style.display = "none";
+    solar.style.display = "none";
 
      if(tipo == "industrial"){
         industrial.style.display = "flex";
@@ -144,5 +196,9 @@ function mostrarPreguntas(){
 
     if(tipo == "domestico"){
         domestico.style.display = "flex";
+    }
+
+    if(tipo == "solar"){
+        solar.style.display = "flex";
     }
 }

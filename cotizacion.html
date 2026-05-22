@@ -22,8 +22,9 @@
                         <label for="tipoInstalacion">Tipo de Instalación:</label>
                         <select id="tipoInstalacion" onchange="mostrarPreguntas()" name="instalacion">
                             <option value="">Selecciona una opción</option>
-                            <option value="industrial">Industrial</option>
-                            <option value="domestico">Doméstico</option>
+                            <option value="industrial">Eléctrico Industrial</option>
+                            <option value="domestico">Eléctrico Doméstico</option>
+                            <option value="solar">Solares</option>
                         </select>
 
                         <div id="preguntasIndustrial" class="oculto">
@@ -55,6 +56,22 @@
                                     <option value="dePaso">De paso (220V)</option>
                                     <option value="Deposito220">Depósito (220V)</option>
                                     <option value="Deposito110">Depósito (110V)</option>
+                                </select>
+                        </div>
+
+                        <div id="preguntasSolar" class="oculto">
+                            <div class="grupoP">
+                                <label for="personas">¿Cuántas personas residen en el lugar?</label>
+                                <div class="enLinea">
+                                    <input id="personas" type="number" name="personas"> 
+                                    <p>personas</p>
+                                </div>
+                            </div>
+                                <label>Tipo de sistema de agua</label>
+                                <select id="tipoSistema" name="sistema">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="tinaco">Tinaco </option>
+                                    <option value="bomba">Bomba Presurizada</option>
                                 </select>
                         </div>
 
