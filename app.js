@@ -155,11 +155,13 @@ function cotizar() {
                 cotizado = costoCalentadores + costoResiduo;
 
             }else if(tipoSistema == "bomba"){
-                const precios = { 1: 8550, 2: 10764, 3: 13428, 4: 16938, 5: 38934, 6: 57690};
-                calentadores = Math.trunc(personas/6);
-                residuo = personas % 6;
+                const precios = { 1: 8550, 2: 8550, 3: 10764, 4: 10764, 5: 13428, 6: 16938, 7: 16938};
+                for (let i = 8; i<=15; i++){ precios[i] = 38934;}
+                for(let i = 16; i<= 25; i++){ precios[i] = 57690;}
+                calentadores = Math.trunc(personas/25);
+                residuo = personas % 25;
 
-                const costoCalentadores = calentadores * precios[6];
+                const costoCalentadores = calentadores * precios[25];
 
                 let costoResiduo;
                 if (residuo > 0) {
