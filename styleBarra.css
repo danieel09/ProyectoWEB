@@ -1,88 +1,23 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root{
+     --primary: #091225;
+    --secondary: #12264a;
+    --bg-dark: #12264a;
+    --text-gray: #1a2431;
+    --white: #ffffff;
+    --blue: #0d1b36;
+    --crema: #f0f2f5;
+}
+
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #12264a;
     margin: 0;
     background-color: #f7f3e8;
 }
 
-h1, h2{
-    margin-top: 50px;
-    text-align: center;
-}
-
-.logoPrincipal {
-    width: 100%;
-    height: 100%;              
-    display: flex;
-    align-items: left;
-    flex-direction: row;
-    justify-content: left; 
-    background-size: cover; 
-    background-position: center; 
-    color: white; 
-    margin: 0;
-}
-
-.dosPartes{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;         
-    margin: 100px 0;
-}
-
-.dosPartes img {
-    width: 30%;
-    height: auto;
-    border-radius: 50px;
-    margin-right: 100px;
-}
-
-#explicacion, #cotizar {
-    width: 220px;
-    height: 60px;
-
-    background: #d3df66;
-    color: #12264a;
-
-    border: none;
-    border-radius: 35px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-
-#explicacion:hover, #cotizar:hover {
-    background-color: #f7f3e8;
-    color: #12264a;
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-.logoPrincipal img {
-    max-width: 35%;
-    max-height: 100%;
-    margin: 0;
-}
-
-.logoPrincipal h1 {
-    margin: auto;
-}
-
-footer{
-    background-color: #12264a;
-    color: aliceblue;
-    padding: 20px;
-    text-align: center;
-}
-
+/*navegador*/
 nav {
     background-color: #12264a;
     padding: 0;
@@ -148,59 +83,279 @@ form, form2 {
     gap: 10px;              
 }
 
-.fondoAzul{
-    width: 600px;
-    padding: 50px;
-    background-color: #12264a;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-    justify-content: center;
+
+/*pantalla de inicio*/
+.Inicio{
     display: flex;
-    
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(36, 44, 47, 0.67), rgba(36, 44, 47, 0.67)), 
+                url('https://static.vecteezy.com/system/resources/thumbnails/066/010/019/small/solar-water-heater-on-a-roof-under-a-clear-blue-sky-promoting-renewable-energy-for-eco-friendly-living-photo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.Inicio .contenido{
+    max-width: 50rem;
+    align-items: center;
+    margin-left: 100px;
 }
 
-#btnEnviar, #btnCotizar{
-   margin-top: 30px;
-   padding: 10px;
-   background-color: #8ec9ba;
+.Inicio .contenido h1{
+    font-size: 6rem;
+    color: #f7f3e8;
+
+}
+.Inicio .contenido p{
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+#cotizar {
+    width: 220px;
+    height: 60px;
+
+    background: #d3df66;
     color: #12264a;
-    border-radius: 10px;
+
+    border: none;
+    border-radius: 35px;
+
+    font-size: 16px;
     font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
-#btnEnviar:hover, #btnCotizar:hover {
+
+#cotizar:hover {
     background-color: #f7f3e8;
     color: #12264a;
     cursor: pointer;
     transform: scale(1.05);
 }
 
-label{
-    color: white;
-}
 
-.contenedor{
-    justify-content: center;
+/*historiaaaaaaaa*/
+
+.historia {
     display: flex;
-    margin-bottom: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.historia .organizado{
+    margin: 80px auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 88%;
+
 }
 
-.oculto{
-    display: none;
+.historia img.historia1{
+    max-width: 500px;
+    float: left;
+    border-radius: 10px;
+    margin-right: 25px;
+
+}
+.textoG {
+    flex: 1.2;
+    display: flex;
     flex-direction: column;
-    width: 300px;          
-    gap: 10px;
-    color: white;
+    justify-content: center;
+}
+
+.textoG h1 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+/* Contenedor para que el bloque de clientes respire abajo */
+.seccion-clientes {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding: 40px 0 60px 0;
+    box-sizing: border-box;
+}
+
+/* Centra el texto de los clientes y le da el mismo ancho que la historia */
+.textoF {
+    max-width: 90%; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.textoF h1 {
+    font-size: 2.5rem;
+    color: var(--secondary); /* Usa tu color azul #12264a */
+    margin-bottom: 20px;
+}
+
+.textoF p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+.historia p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 0 15px 0;
+}
+
+/* historia*/
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.seccion-fundadores {
+    width: 100%;
+    display: block;
+    clear: both;
+    margin-top: 20px;
+}
+
+.fundadores .contenedor {
+    height: 180px; /* Recuperamos el alto original que tenías */
+    text-align: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 18, 37, 1) 0%,
+        rgba(9, 18, 37, 0.9) 60%,
+        rgba(9, 18, 37, 0.5) 70%,
+        rgba(9, 18, 37, 0.2) 80%,
+        rgba(9, 18, 37, 0.05) 90%,
+        transparent 100% /* Corregido: añadido el % que faltaba */
+    );
+}
+
+.fundadores .contenedor h2 {
+    color: var(--crema);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Cuadrícula Grid para las Cards */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 60px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Tarjeta Individual */
+.dashboard .card {
+    background: var(--white);
+    width: 100%;
+    max-width: 320px;
+    border-radius: 24px;
+    position: relative; 
+    overflow: hidden; 
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+}
+
+.class-header {
+    height: 140px;
+    background: radial-gradient(var(--primary), var(--secondary));
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 40px;
+    text-align: center;
+}
+
+/* Fotos circulares de fundadores */
+.imag1, .imag2, .imag3 {
+    width: 130px;
+    height: 130px;
+    background-color: #e2e8f0;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+    background-size: cover;
+    background-position: center;
+}
+
+.imag1 { background-image: url("imagenes/mondra.jpeg"); }
+.imag2 { background-image: url("imagenes/ed.jpeg"); }
+.imag3 { background-image: url("imagenes/manu.jpeg"); }
+
+.info {
+    margin-top: 50px;
+}
+
+.info h2 {
+    margin: 10px 0 5px; 
+    color: var(--bg-dark);
+    font-size: 1.4rem;
+}
+
+.info h4 {
+    color: #6b7280;
+    margin: 0 0 15px 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.info p { 
+    color: var(--text-gray); 
+    font-size: 0.9rem; 
+    margin-bottom: 0; 
+    text-align: justify;
+    line-height: 1.5;
 }
 
 
 /*Footer de contacto*/
+footer{
+    background-color: #12264a;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    display: block; /* Asegura que se comporte como un bloque sólido */
+    clear: both;
+}
+
 .cnt{
     width: 100%;
     background-color: #12264a;
     margin: 0%;
     padding: 0%;
-    margin-top: 100px;
 }
 
 .cnt .grupoA{
