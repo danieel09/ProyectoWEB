@@ -10,6 +10,7 @@
     --white: #ffffff;
     --blue: #0d1b36;
     --crema: #f0f2f5;
+    --accent: #8ec9ba;
 }
 
 body{
@@ -185,6 +186,7 @@ form, form2 {
     clear: both;
     padding: 40px 0 60px 0;
     box-sizing: border-box;
+    margin-top: 60px;
 }
 
 /* Centra el texto de los clientes y le da el mismo ancho que la historia */
@@ -227,7 +229,7 @@ form, form2 {
     width: 100%;
     display: block;
     clear: both;
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .fundadores .contenedor {
@@ -236,12 +238,13 @@ form, form2 {
     background: linear-gradient(
         to bottom,
         rgba(9, 18, 37, 1) 0%,
-        rgba(9, 18, 37, 0.9) 60%,
-        rgba(9, 18, 37, 0.5) 70%,
-        rgba(9, 18, 37, 0.2) 80%,
+        rgba(9, 18, 37, 0.9) 80%,
         rgba(9, 18, 37, 0.05) 90%,
         transparent 100% /* Corregido: añadido el % que faltaba */
     );
+    display: flex;
+    justify-content: center; /* Centra el texto de izquierda a derecha */
+    align-items: center;
 }
 
 .fundadores .contenedor h2 {
@@ -347,8 +350,7 @@ footer{
     color: aliceblue;
     padding: 20px;
     text-align: center;
-    display: block; /* Asegura que se comporte como un bloque sólido */
-    clear: both;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .cnt{
@@ -376,14 +378,22 @@ footer{
     align-items: center; 
 }
 
-.cnt .grupoA .box  figure img{
-    width: 440px;
+.cnt .grupoA .box figure img {
+    max-width: 100%; 
+    height: auto; 
 }
 
 .cnt .grupoA .box h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20 px;
+}
+
+.cnt .grupoA .box h3 {
+    color: #8ec9ba; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 14px;
+    text-transform: uppercase; 
 }
 
 .cnt .grupoA .box p{
@@ -399,12 +409,11 @@ footer{
     box-sizing: border-box;
 }
 
-@media screen and (max-width:800px){
-    .cnt .grupoA{
-        width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-        padding: 45px 0px;
+@media screen and (max-width: 800px) {
+    .cnt .grupoA {
+        grid-template-columns: 1fr; 
+        grid-gap: 30px;
+        text-align: center;
     }
 }
 

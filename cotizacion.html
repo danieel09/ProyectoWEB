@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
+        <meta charset="UTF-8">
         <title>LEYDEN - cotizacion</title>
         <link rel="stylesheet" href="styleContacto.css">
     </head>
-      <body>
+    <body>
         <nav>
             <ul>
                 <li class="logo-item">
@@ -14,78 +15,80 @@
                 </li>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#historia">Nuestra historia</a></li>
-                <li><a href="productos.html">Nuestro catálogo</a> </li>
+                <li><a href="productos.html">Nuestro catálogo</a></li>
                 <li><a href="index.html#aplicaciones">Nuestra tecnología</a></li>
                 <li><a href="contacto.html">Nuestro contacto</a></li>
             </ul>
         </nav>
-        <h1>COTIZACION</h1>
-        <div class="form2">
-            <div class="contenedor">
-                <div class="fondoAzul">
-                    <form onsubmit="return cotizar()">
-                        <label for="tipoInstalacion">Tipo de Instalación:</label>
-                        <select id="tipoInstalacion" onchange="mostrarPreguntas()" name="instalacion">
+
+        <section class="encabezado-contacto">
+            <h1>Cotización</h1>
+        </section>
+
+        <div class="contenedor">
+            <div class="fondoAzul">
+                <form onsubmit="return cotizar()">
+                    <label for="tipoInstalacion">Tipo de Instalación:</label>
+                    <select id="tipoInstalacion" onchange="mostrarPreguntas()" name="instalacion">
+                        <option value="">Selecciona una opción</option>
+                        <option value="industrial">Eléctrico Industrial</option>
+                        <option value="domestico">Eléctrico Doméstico</option>
+                        <option value="solar">Solares</option>
+                    </select>
+
+                    <div id="preguntasIndustrial" class="oculto">
+                        <div class="grupoP">
+                            <label for="litros">¿Cuántos litros por minuto quiere usar?</label>
+                            <div class="enLinea">
+                                <input id="litros" type="number" name="litros"> 
+                                <p class="texto-unidad">litros</p>
+                            </div>
+                            <label for="temperatura">¿Qué temperatura final requiere?</label>
+                            <div class="enLinea">
+                                <input id="temperatura" type="number" name="temperatura">
+                                <p class="texto-unidad">C°</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="preguntasDomestico" class="oculto">
+                        <div class="grupoP">
+                            <label for="regaderas">¿Cuántas Regaderas simultáneas se necesitan?</label>
+                            <div class="enLinea">
+                                <input id="regaderas" type="number" name="regaderas"> 
+                                <p class="texto-unidad">regaderas</p>
+                            </div>
+                        </div>
+                        <label for="tipoCalentador">Tipo de Calentador requerido</label>
+                        <select id="tipoCalentador" name="calentador">
                             <option value="">Selecciona una opción</option>
-                            <option value="industrial">Eléctrico Industrial</option>
-                            <option value="domestico">Eléctrico Doméstico</option>
-                            <option value="solar">Solares</option>
+                            <option value="dePaso">De paso (220V)</option>
+                            <option value="Deposito220">Depósito (220V)</option>
+                            <option value="Deposito110">Depósito (110V)</option>
                         </select>
+                    </div>
 
-                        <div id="preguntasIndustrial" class="oculto">
-                            <div class="grupoP">
-                                <label for="litros">¿Cuántos litros por minuto quiere usar?</label>
-                                <div class="enLinea">
-                                    <input id="litros" type="number" name="litros"> 
-                                    <p>litros</p>
-                                </div>
-                                <label for="temperatura">¿Qué temperatura final requiere?</label>
-                                <div class="enLinea">
-                                    <input id="temperatura" type="number" name="temperatura">
-                                    <p>C°</p>
-                                </div>
+                    <div id="preguntasSolar" class="oculto">
+                        <div class="grupoP">
+                            <label for="personas">¿Cuántas personas residen en el lugar?</label>
+                            <div class="enLinea">
+                                <input id="personas" type="number" name="personas"> 
+                                <p class="texto-unidad">personas</p>
                             </div>
                         </div>
+                        <label for="tipoSistema">Tipo de sistema de agua</label>
+                        <select id="tipoSistema" name="sistema">
+                            <option value="">Selecciona una opción</option>
+                            <option value="tinaco">Tinaco</option>
+                            <option value="bomba">Bomba Presurizada</option>
+                        </select>
+                    </div>
 
-                        <div id="preguntasDomestico" class="oculto">
-                            <div class="grupoP">
-                                <label for="regaderas">¿Cuántas Regaderas simultáneas se necesitan?</label>
-                                <div class="enLinea">
-                                    <input id="regaderas" type="number" name="regaderas"> 
-                                    <p>regaderas</p>
-                                </div>
-                            </div>
-                                <label>Tipo de Calentador requerido</label>
-                                <select id="tipoCalentador" name="calentador">
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="dePaso">De paso (220V)</option>
-                                    <option value="Deposito220">Depósito (220V)</option>
-                                    <option value="Deposito110">Depósito (110V)</option>
-                                </select>
-                        </div>
-
-                        <div id="preguntasSolar" class="oculto">
-                            <div class="grupoP">
-                                <label for="personas">¿Cuántas personas residen en el lugar?</label>
-                                <div class="enLinea">
-                                    <input id="personas" type="number" name="personas"> 
-                                    <p>personas</p>
-                                </div>
-                            </div>
-                                <label>Tipo de sistema de agua</label>
-                                <select id="tipoSistema" name="sistema">
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="tinaco">Tinaco </option>
-                                    <option value="bomba">Bomba Presurizada</option>
-                                </select>
-                        </div>
-
-                        <button id="btnCotizar" type="submit" value="Cotizar">Cotizar</button>
-                    </form>
-                </div>
+                    <button id="btnCotizar" type="submit">Cotizar</button>
+                </form>
             </div>
         </div>
-        <script src="app.js"></script>
+
         <footer class="cnt">
             <div class="grupoA">
                 <div class="box">
@@ -98,7 +101,7 @@
                 <div class="box">
                     <h2>Contacto</h2>
                     <h3>Teléfono:</h3>
-                    <p> (33) 3020-5445</p>
+                    <p>(33) 3020-5445</p>
                     <h3>Celular:</h3>
                     <p>(33) 3100-8737</p>
                 </div>
@@ -111,8 +114,10 @@
                 </div>
             </div>
             <div class="grupoB">
-                <small>&copy; 1987 <b> LEYDEN</b> - Todos los Derechos Reservados. </small>
+                <small>&copy; 1987 <b>LEYDEN</b> - Todos los Derechos Reservados. </small>
             </div>
         </footer>
+
+        <script src="app.js"></script>
     </body>
 </html>

@@ -84,6 +84,7 @@ footer{
     color: aliceblue;
     padding: 20px;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .cnt{
@@ -112,14 +113,22 @@ footer{
     align-items: center; 
 }
 
-.cnt .grupoA .box  figure img{
-    width: 440px;
+.cnt .grupoA .box figure img {
+    max-width: 100%; 
+    height: auto; 
 }
 
 .cnt .grupoA .box h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20 px;
+}
+
+.cnt .grupoA .box h3 {
+    color: #8ec9ba; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 14px;
+    text-transform: uppercase; 
 }
 
 .cnt .grupoA .box p{

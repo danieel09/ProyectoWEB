@@ -20,7 +20,46 @@ function validar() {
         return false;
     }
 
-    return true;
+    let btn = document.getElementById("btnEnviar");
+    btn.innerText = "Enviando...";
+    btn.disabled = true;
+
+    const datosFormulario = {
+        access_key: "c94d0808-0df8-490e-aa3b-1522b3a9c294",
+        subject: "Nueva sugerencia de LEYDEN",
+        from_name: "Contacto LEYDEN",
+        Nombre: nombre,
+        Correo: email,
+        Telefono: telefono,
+        Mensaje: comentarios
+    };
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(datosFormulario)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = "gracias.html";
+        } else {
+            alert("Hubo un error al procesar el formulario.");
+            btn.innerText = "Enviar";
+            btn.disabled = false;
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Error de conexión con el servidor.");
+        btn.innerText = "Enviar";
+        btn.disabled = false;
+    });
+
+    return false;
 }
 
 function cotizar() {

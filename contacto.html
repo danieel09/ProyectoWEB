@@ -19,33 +19,38 @@
                 <li><a href="contacto.html">Nuestro contacto</a></li>
             </ul>
         </nav>
-        <h1>CONTACTO</h1>
-        <div class="form">
-            <p>
-                Si desea información o alguna cotización.
-
-                Aviso de privacidad: Leyden no transferirá a terceros datos ni registros personales proporcionados a nosotros por usted a través de Internet o cualesquier otro medio de comunicación para finalidades diferentes de las anteriormente indicadas sin ponerlo antes en su conocimiento y obtener su permiso escrito al respecto.<br>
+        <section class="encabezado-contacto">
+            <h1>Contacto</h1>
+            <p class="descripcion-contacto">
+                Si desea información o alguna cotización, por favor llene el siguiente formulario.
             </p>
-            <div class="contenedor">
-                <div class="fondoAzul">
-                    <form onsubmit="return validar()">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre">
-                        <label for="email">Email:</label>
-                        <input type="text" id="email" name="email">
-                        <label for="telefono">Teléfono:</label>
-                        <input type="text" id="telefono" name="telefono" placeholder="10 dígitos" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                        <label for="comentarios">Comentarios:</label>
-                        <textarea id="comentarios" name="comentarios" placeholder="Aquí ingresa tus comentarios..."></textarea>
-                        <div class="avisoPrivacidad">
-                            <input type="checkbox" id="privacidad" required>
-                            <label for="privacidad">
-                                He leído y acepto el aviso de privacidad.
-                            </label>
-                        </div>
-                        <button id="btnEnviar" type="submit" value="Enviar">Enviar</button>
-                    </form>
-                </div>
+            <div class="aviso-flotante">
+                <strong>Aviso de privacidad:</strong> Leyden no transferirá a terceros datos ni registros personales proporcionados a nosotros por usted a través de Internet o cualquier otro medio de comunicación para finalidades diferentes de las anteriormente indicadas sin ponerlo antes en su conocimiento y obtener su permiso escrito al respecto.
+            </div>
+        </section>
+
+        <div class="contenedor">
+            <div class="fondoAzul">
+                <form onsubmit="return validar()">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                    
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="10 dígitos" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" placeholder="¿En qué podemos ayudarte?"></textarea>
+                    
+                    <div class="avisoPrivacidad">
+                        <input type="checkbox" id="privacidad" required>
+                        <label for="privacidad">He leído y acepto el aviso de privacidad.</label>
+                    </div>
+                    
+                    <button id="btnEnviar" type="submit">Enviar Mensaje</button>
+                </form>
             </div>
         </div>
         <footer class="cnt">
