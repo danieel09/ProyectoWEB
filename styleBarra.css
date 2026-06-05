@@ -1,5 +1,5 @@
 *{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma;
 }
 
 :root{
@@ -437,7 +437,199 @@ footer{
     width: 250px;
 }
 
-/*APLICACIONES PANTALLA DE INICIO*/
+            /*NUESTRA TECNOLOGÍAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+.acordeon-calentadores{
+    background-color: #12264a;
+    width: 100%;
+    color: var(--crema);
+    border-radius: 20px;
+}
+
+.acordeon-header{
+    list-style: none;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.acordeon-header:hover{
+    border-radius: 20px;
+    background-color: #091225;
+}
+
+.acordeon-contenido{
+    padding: 2px 20px;
+    color:#f7f3e8;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.intro-text{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    border-left: 4px solid #ffef43; 
+    padding-left: 15px;
+    color: #e2e8f0;
+}
+
+details[open] svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; 
+}
+
+/*contenido adentro de despegable*/
+.bloqueimagen {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.imagenSolar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenSolar img {
+    max-width: 100%;
+    height: 300px;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5)); 
+}
+
+.contenido-bloque h3, 
+.detalle-card h3 {
+    font-size: 20px;
+    color: #ffef43; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lista-caracteristicas {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.lista-caracteristicas li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--crema);
+}
+
+.lista-caracteristicas li::before {
+    content: "•";
+    color: #ffef43; 
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.bloque-detalles-grid {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+}
+
+.detalle-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.detalle-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-3px); 
+}
+
+.detalle-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--crema);
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .bloque-componentes,
+    .bloque-detalles-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .acordeon-contenido {
+        padding: 15px;
+    }
+}
+
+
+/*beneficioooooooooooooooooooooooooooooos*/
+.beneficios {
+    font-family: Verdana, sans-serif;
+}
+
+.beneficios h3 {
+    font-size: 28px;
+}
+
+.beneficios-gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px; /* Separación perfecta entre filas y columnas */
+}
+
+.elementoB {
+    color: #0d1b36;
+    background-color:#efefef; 
+    border: 1px solid #e2e8f0;   
+    border-radius: 12px;        
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.elementoB:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(11, 26, 48, 0.08); 
+    border-color: #12264a; 
+}
+
+.elementoB p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #12264a; 
+    margin: 0;
+}
+
+.elementoB p strong {
+    display: block;      
+    font-size: 18px;
+    color: #0d1b36;       
+    margin-bottom: 12px;   
+    font-weight: 700;
+}
+
+                    /*APLICACIONES PANTALLA DE INICIO*/
 .apls h1{
     margin-top: 30px;
 
