@@ -16,6 +16,7 @@
 body{
     margin: 0;
     background-color: #f7f3e8;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*navegador*/
@@ -437,9 +438,18 @@ footer{
 }
 
 /*APLICACIONES PANTALLA DE INICIO*/
+.apls h1{
+    margin-top: 30px;
+
+}
+
+.apls h4{
+    margin-top: 4px;
+}
+
 .slider-opciones{
     width: auto;
-    height: 200px;
+    height: 500px;
     margin: 50px auto 0;
     overflow: hidden;
 }
@@ -447,8 +457,10 @@ footer{
 .slider-opciones ul{
     display: flex;
     padding: 0;
-    width: 400%;
-    animation: slide 20s infinite alternate ease-in-out;
+    margin: 0;
+    width: 1000%; 
+    height: 100%;
+    animation: slide 10s infinite alternate ease-in-out;
 }
 
 .slider-opciones li{
@@ -459,54 +471,66 @@ footer{
 
 .textoC{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding: 0 250px;
-    top: 250px;
-    color: var(--crema);
+    color: #fff; 
+    z-index: 10;
+    width: 80%; 
+    max-width: 800px;
 }
 
 .textoC h2{
     font-size: 45px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
+}
+
+.textoC p{
+    font-size: 18px;
+    line-height: 1.5;
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
 }
 
 .slider-opciones img{
     width: 100%;
-
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.92;
+    filter: brightness(0.5);
 }
 
 @keyframes slide{
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+    0%, 8% { margin-left: 0; }
+    10%, 18% { margin-left: -100%; }
+    20%, 28% { margin-left: -200%; }
+    30%, 38% { margin-left: -300%; }
+    40%, 48% { margin-left: -400%; }
+    50%, 58% { margin-left: -500%; }
+    60%, 68% { margin-left: -600%; }
+    70%, 78% { margin-left: -700%; }
+    80%, 88% { margin-left: -800%; }
+    90%, 100% { margin-left: -900%; }
 }
 
 @media(max-width: 991px){
-    body{
-        padding: 30px;
-    }
-    .slider-opciones{
-        width: 100%;
+    .slider-opciones {
+        height: 400px; 
     }
 
-    .textoC{
-        top: 50px;
-        padding: 0 25px;
+    .textoC h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
     }
 
-    .textoC h2{
-        font-size: 35px;
-        margin-bottom: 15px;
+    .textoC p {
+        font-size: 14px;
     }
+}
 
-    .textoC p{
-        font-size: 15px;
-    }
+.fin{
+    padding: 30px;
 }
 
 
