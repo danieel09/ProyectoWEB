@@ -435,3 +435,56 @@ footer{
 .enLinea input{
     width: 250px;
 }
+
+
+/*PANTALLA DE GRACIAAAAAAAAAAAAAAAAAAAAAAAAAAS*/
+.thanks{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(36, 44, 47, 0.67), rgba(36, 44, 47, 0.67)), 
+                url('https://static.vecteezy.com/system/resources/thumbnails/066/010/019/small/solar-water-heater-on-a-roof-under-a-clear-blue-sky-promoting-renewable-energy-for-eco-friendly-living-photo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.thanks .content{
+    max-width: 50rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thanks .content h1{
+    font-size: 6rem;
+    color: #f7f3e8;
+
+}
+.thanks .content p{
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.thanks .btn{
+    width: 220px;
+    height: 60px;
+
+    background: #d3df66;
+    color: #12264a;
+
+    border: none;
+    border-radius: 35px;
+
+    font-size: 16px;
+    font-weight: 700;
+ 
+    align-items: center;
+    transition: 0.3s;
+}
+
+.thanks .btn:hover {
+    background-color: #f7f3e8;
+    color: #12264a;
+    cursor: pointer;
+    transform: scale(1.05);   
+}
