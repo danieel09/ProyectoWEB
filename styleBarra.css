@@ -1,5 +1,20 @@
-*{
-    font-family:Verdana, Geneva, Tahoma;
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap');
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f3e8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Lora', serif !important;
+    font-size: 18px;           
+    font-weight: 500;           
+    line-height: 1.7;          
 }
 
 :root{
@@ -11,12 +26,6 @@
     --blue: #0d1b36;
     --crema: #f0f2f5;
     --accent: #8ec9ba;
-}
-
-body{
-    margin: 0;
-    background-color: #f7f3e8;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*navegador*/
@@ -145,6 +154,10 @@ form, form2 {
 
 /*historiaaaaaaaa*/
 
+.texto-centro {
+    text-align: center;
+}
+
 .historia {
     display: flex;
     flex-direction: row;
@@ -231,21 +244,17 @@ form, form2 {
     display: block;
     clear: both;
     margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .fundadores .contenedor {
-    height: 180px; /* Recuperamos el alto original que tenías */
+    height: 180px;
     text-align: center;
-    background: linear-gradient(
-        to bottom,
-        rgba(9, 18, 37, 1) 0%,
-        rgba(9, 18, 37, 0.9) 80%,
-        rgba(9, 18, 37, 0.05) 90%,
-        transparent 100% /* Corregido: añadido el % que faltaba */
-    );
+    background: radial-gradient(var(--primary), var(--secondary));
     display: flex;
-    justify-content: center; /* Centra el texto de izquierda a derecha */
+    justify-content: center;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 .fundadores .contenedor h2 {
@@ -295,11 +304,10 @@ form, form2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 30px 40px;
+    padding: 20px 30px 45px; 
     text-align: center;
 }
 
-/* Fotos circulares de fundadores */
 .imag1, .imag2, .imag3 {
     width: 130px;
     height: 130px;
@@ -320,28 +328,32 @@ form, form2 {
 .imag3 { background-image: url("imagenes/manu.jpeg"); }
 
 .info {
-    margin-top: 50px;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
 }
 
 .info h2 {
-    margin: 10px 0 5px; 
+    margin: 0;
     color: var(--bg-dark);
     font-size: 1.4rem;
 }
 
 .info h4 {
     color: #6b7280;
-    margin: 0 0 15px 0;
+    margin: 0;
     font-weight: 500;
     font-size: 0.95rem;
 }
 
 .info p { 
     color: var(--text-gray); 
-    font-size: 0.9rem; 
+    font-size: 0.92rem; 
+    margin-top: 20px;
     margin-bottom: 0; 
-    text-align: justify;
-    line-height: 1.5;
+    text-align: left !important;
+    line-height: 1.6;
 }
 
 
@@ -585,54 +597,55 @@ details[open] svg {
 
 /*beneficioooooooooooooooooooooooooooooos*/
 .beneficios {
-    font-family: Verdana, sans-serif;
+    margin-top: 80px; 
 }
 
 .beneficios h3 {
+    text-align: center;
     font-size: 28px;
+    color: var(--secondary);
+    margin-bottom: 45px;
 }
 
 .beneficios-gridContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px; /* Separación perfecta entre filas y columnas */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
 }
 
 .elementoB {
-    color: #0d1b36;
-    background-color:#efefef; 
-    border: 1px solid #e2e8f0;   
-    border-radius: 12px;        
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    background-color: #f0f4f8;
+    border-radius: 10px; 
+    padding: 30px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(18, 38, 74, 0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .elementoB:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(11, 26, 48, 0.08); 
-    border-color: #12264a; 
+    box-shadow: 0 10px 22px rgba(18, 38, 74, 0.12);
+    border-color: var(--accent);
+    background-color: var(--white);
 }
 
 .elementoB p {
+    margin: 0;
     font-size: 15px;
     line-height: 1.6;
-    color: #12264a; 
-    margin: 0;
+    color: var(--text-gray);
 }
 
 .elementoB p strong {
-    display: block;      
-    font-size: 18px;
-    color: #0d1b36;       
-    margin-bottom: 12px;   
-    font-weight: 700;
+    display: block; 
+    font-size: 17px;
+    color: var(--secondary);
+    margin-bottom: 10px;
 }
 
                     /*APLICACIONES PANTALLA DE INICIO*/
 .apls h1{
-    margin-top: 30px;
-
+    margin-top: 100px;
 }
 
 .apls h4{
@@ -652,7 +665,7 @@ details[open] svg {
     margin: 0;
     width: 1000%; 
     height: 100%;
-    animation: slide 10s infinite alternate ease-in-out;
+    animation: slide 30s infinite alternate ease-in-out;
 }
 
 .slider-opciones li{
@@ -776,4 +789,8 @@ details[open] svg {
     color: #12264a;
     cursor: pointer;
     transform: scale(1.05);   
+}
+
+.herohead {
+    margin-bottom: 60px;
 }
