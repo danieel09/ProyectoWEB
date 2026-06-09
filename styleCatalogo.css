@@ -11,6 +11,7 @@
     --white: #ffffff;
     --blue: #0d1b36;
     --crema: #f0f2f5;
+    --accent: #8ec9ba;
 }
 
 body{
@@ -153,4 +154,143 @@ footer{
     }
 }
 
+.calentadores {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
 
+.catalogo, .catalogo h1, .Electricos h3 {
+    color: #091225;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.catalogo::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #8ec9ba;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
+}
+
+.Electricos::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #8ec9ba;
+    border-radius: 2px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.productos-item {
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productos-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(9, 18, 37, 0.08);
+}
+
+.productos-header {
+    list-style: none;
+    cursor: pointer;
+    padding: 24px 24px 10px 24px;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos-header img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px auto;
+}
+
+.productos-header h2 {
+    color: white;
+    font-size: 17px;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.producto-resumen {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+.btn-desplegar {
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.icono-flecha{
+    color: white;
+    margin-bottom: 0;
+}
+
+details[open] svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; 
+}
+
+.productos-contenido {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 24px 24px 24px;
+    margin-top: 0;    
+}
+
+.caracteristicas-flotante {
+    background-color: var(--white);
+    border-left: 4px solid var(--secondary);
+    padding: 15px 20px;
+    color: var(--text-gray);
+    line-height: 1.5;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 18px;
+    font-family: 'Lora', serif !important;
+    margin-bottom: 100px;
+
+}
+
+.caracteristicas-flotante p, li{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.caracteristicas-flotante:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(18, 38, 74, 0.12);
+    border-color: var(--accent);
+    background-color: var(--crema);
+}

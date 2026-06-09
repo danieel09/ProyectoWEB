@@ -4,19 +4,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    margin: 0;
-    background-color: #f7f3e8;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-p {
-    font-family: 'Lora', serif !important;
-    font-size: 18px;           
-    font-weight: 500;           
-    line-height: 1.7;          
-}
-
 :root{
      --primary: #091225;
     --secondary: #12264a;
@@ -26,6 +13,23 @@ p {
     --blue: #0d1b36;
     --crema: #f0f2f5;
     --accent: #8ec9ba;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f3e8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p, h4 {
+    font-family: 'Lora', serif !important;
+    font-size: 18px;           
+    font-weight: 500;           
+    line-height: 1.7;          
+}
+
+li, h3, ul, .contenido-bloque strong, h1, h2, summary{
+    font-family: 'Lora', serif;
 }
 
 /*navegador*/
@@ -114,7 +118,7 @@ form, form2 {
 .Inicio .contenido h1{
     font-size: 6rem;
     color: #f7f3e8;
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .Inicio .contenido p{
     font-size: 1.5rem;
@@ -193,7 +197,6 @@ form, form2 {
     color: var(--secondary);
     margin-bottom: 20px;
 }
-/* Contenedor para que el bloque de clientes respire abajo */
 .seccion-clientes {
     width: 100%;
     display: block;
@@ -203,7 +206,6 @@ form, form2 {
     margin-top: 60px;
 }
 
-/* Centra el texto de los clientes y le da el mismo ancho que la historia */
 .textoF {
     max-width: 90%; 
     margin: 0 auto; 
@@ -213,7 +215,7 @@ form, form2 {
 
 .textoF h1 {
     font-size: 2.5rem;
-    color: var(--secondary); /* Usa tu color azul #12264a */
+    color: var(--secondary); 
     margin-bottom: 20px;
 }
 
@@ -458,6 +460,11 @@ footer{
     border-radius: 20px;
 }
 
+.herohead{
+    color: var(--secondary);
+    margin-bottom: 60px;
+}
+
 .acordeon-header{
     list-style: none;
     padding: 20px 30px;
@@ -646,10 +653,12 @@ details[open] svg {
                     /*APLICACIONES PANTALLA DE INICIO*/
 .apls h1{
     margin-top: 100px;
+    color: var(--secondary);
 }
 
 .apls h4{
     margin-top: 4px;
+    color: var(--bg-dark);
 }
 
 .slider-opciones{
@@ -789,8 +798,4 @@ details[open] svg {
     color: #12264a;
     cursor: pointer;
     transform: scale(1.05);   
-}
-
-.herohead {
-    margin-bottom: 60px;
 }
