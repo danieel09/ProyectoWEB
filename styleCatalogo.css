@@ -223,7 +223,7 @@ footer{
 .productos-header img{
     display: block;
     max-width: 100%;
-    height: auto;
+    height: 300px;
     margin: 0 auto 15px auto;
 }
 
